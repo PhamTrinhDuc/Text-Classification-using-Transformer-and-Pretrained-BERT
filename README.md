@@ -27,6 +27,7 @@
    Đối với BERT: ta cần khởi tạo thêm metrics cho qua trình traning sau đó load pretrained và training 
 
 5. Evaluate:
+   
    a. Đối với model transfomer train từ đầu sau 100 epochs:
    
    ![1](https://github.com/PhamTrinhDuc/Text-Classification-using-Transformer-and-Pretrained-BERT/assets/127647215/6c442e11-d125-4548-be35-4cd8e98952dd)
@@ -42,6 +43,7 @@
 
 
 Nhận thấy cả 2 model có kết quả tương đối nhau mặc dù BERT đã được pretrained. Lí do có thể là: 
+
 1. Kích thước bộ dữ liệu:
 
    Bộ dữ liệu đánh giá quán ăn thường nhỏ hơn nhiều so với các bộ dữ liệu mà BERT được huấn luyện ban đầu (BooksCorpus và Wikipedia tiếng Anh).
