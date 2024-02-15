@@ -6,7 +6,9 @@
 2. Hướng tiếp cận: ta sẽ sử dụng các model deep learning với mục tiêu đạt được kết quả cao nhất. Trong task này ta sẽ sử dụng kiến trúc transfomer và pretrained model BERT sau đó so sánh kết quả giữa 2 model này. Với kiến trúc transfomer ta sẽ code model từ các block, layer... và train lại từ đầu, còn với BERT ta sẽ train lại dựa trên các kiến thức của BERT đã được học từ trước sau đó so sánh kết quả giữa 2 model. 
 
 3. Về data, ta sẽ sử dụng bộ dữ liệu tiếng việt gồm có các câu đánh giá của khách hàng mỗi câu ứng với nhãn 0: đánh giá tiêu cực, 1: đánh giá tich cực. Download dataset tại <a href="https://github.com/congnghia0609/ntc-scv.git">đây</a>. Dữ liệu trước khi đưa vào model cần được xử lí:
+   
    3.1 Chuyển các file text trong data thành dạng DataFrame:
+   
    def restructure_data(folder_path):
     examples = []
     for label in os.listdir(folder_path):
@@ -26,7 +28,9 @@
             }
             examples.append(data)
     return pd.DataFrame(examples)
+
    3.2 Xóa các thẻ HTML, URL, các dấu câu ...
+   
    def preprocess_text(text):
     # remove URLs https://www.
     url_pattern = re.compile(r'https?://\s+\wwww\.\s+')
