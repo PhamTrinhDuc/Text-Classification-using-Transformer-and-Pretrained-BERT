@@ -5,22 +5,22 @@
 
 3. Về data, ta sẽ sử dụng bộ dữ liệu tiếng việt gồm có các câu đánh giá của khách hàng mỗi câu ứng với nhãn 0: đánh giá tiêu cực, 1: đánh giá tich cực. Download dataset tại <a href="https://github.com/congnghia0609/ntc-scv.git">đây</a>. Dữ liệu trước khi đưa vào model cần được xử lí gồm các bước chính sau:
 
-   a. Data có dạng là các file text, ta cần lấy data ra và đưa chúng vào 1 DataFrame. DataFrame này sẽ có hai cột: cột đầu tiên là gồm các câu, cột thứ 2 là label của câu đó 
+   a. Data có dạng là các file text, ta cần lấy data ra và đưa chúng vào 1 DataFrame. DataFrame này sẽ có hai cột. Cột đầu tiên là gồm các câu, cột thứ 2 là label của câu đó 
 
    b. Tiền xử lí dữ liệu như: xóa thẻ HTML, URL ...
 
-   c. Tạo tokenizer và bộ vocab cho model:
+   c. Tạo tokenizer và bộ vocab cho model
       Đối với transfomer ta sẽ tự tạo tokenizer và vocab cho model
    
       Với model BERT ta sẽ sử dụng tokenizer có sẵn của BERT
 
-   d Tạo dataset và dataloader:
+   d Tạo dataset và dataloader
    
       Đối với transfomer: ta tự tạo dataset và dataloader dựa vào Pytorch
    
       Đối với BERT ta sẽ tạo tokenizer cho từng batch và data_collator cho quá trình traning
 
-4. Khởi tạo model và training, testing: 
+4. Khởi tạo model và training, testing
 
    Đối với transfomer ta sẽ code lại model từ đầu và traning
 
