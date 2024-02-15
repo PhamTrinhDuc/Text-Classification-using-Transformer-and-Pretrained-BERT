@@ -23,9 +23,9 @@
 
 5. Khởi tạo model và training, testing
 
-   Đối với transfomer ta sẽ code lại model từ đầu và traning
-
-   Đối với BERT: ta cần khởi tạo thêm metrics cho qua trình traning sau đó load pretrained và training 
+      Đối với transfomer ta sẽ code lại model từ đầu và traning
+   
+      Đối với BERT: ta cần khởi tạo thêm metrics cho qua trình traning sau đó load pretrained và training 
 
 6. Evaluate:
    
@@ -35,35 +35,35 @@
 
    b. Đối với pretrained BERT sau 10 epochs:
 
-   {'eval_loss': 0.3751769959926605,
-    'eval_accuracy': 0.8438,
-    'eval_runtime': 55.469,
-    'eval_samples_per_second': 180.281,
-    'eval_steps_per_second': 1.424,
-    'epoch': 10.0}
+         {'eval_loss': 0.3751769959926605,
+          'eval_accuracy': 0.8438,
+          'eval_runtime': 55.469,
+          'eval_samples_per_second': 180.281,
+          'eval_steps_per_second': 1.424,
+          'epoch': 10.0}
 
 
 Nhận thấy cả 2 model có kết quả tương đối nhau mặc dù BERT đã được pretrained. Lí do có thể là: 
 
-1. Kích thước bộ dữ liệu:
-
-   Bộ dữ liệu đánh giá quán ăn thường nhỏ hơn nhiều so với các bộ dữ liệu mà BERT được huấn luyện ban đầu (BooksCorpus và Wikipedia tiếng Anh)
-   
-   Việc huấn luyện BERT với một lượng dữ liệu nhỏ có thể không đủ để BERT học được các đặc điểm cụ thể của bộ dữ liệu đánh giá quán ăn
-
-2. Chất lượng dữ liệu:
-
-   Chất lượng dữ liệu trong bộ dữ liệu đánh giá quán ăn có thể không cao như các bộ dữ liệu mà BERT được huấn luyện ban đầu
-   
-   Dữ liệu nhiễu hoặc không chính xác
-
-3. Thuật toán huấn luyện:
-
-   Thuật toán huấn luyện BERT có thể không được tối ưu hóa cho các bài toán về đánh giá quán ăn
-   
-4. Việc fine-tune:
-
-   BERT có thể không được fine-tune tốt cho bộ dữ liệu đánh giá quán ăn
+      1. Kích thước bộ dữ liệu:
+      
+         Bộ dữ liệu đánh giá quán ăn thường nhỏ hơn nhiều so với các bộ dữ liệu mà BERT được huấn luyện ban đầu (BooksCorpus và Wikipedia tiếng Anh)
+         
+         Việc huấn luyện BERT với một lượng dữ liệu nhỏ có thể không đủ để BERT học được các đặc điểm cụ thể của bộ dữ liệu đánh giá quán ăn
+      
+      2. Chất lượng dữ liệu:
+      
+         Chất lượng dữ liệu trong bộ dữ liệu đánh giá quán ăn có thể không cao như các bộ dữ liệu mà BERT được huấn luyện ban đầu
+         
+         Dữ liệu nhiễu hoặc không chính xác
+      
+      3. Thuật toán huấn luyện:
+      
+         Thuật toán huấn luyện BERT có thể không được tối ưu hóa cho các bài toán về đánh giá quán ăn
+         
+      4. Việc fine-tune:
+      
+         BERT có thể không được fine-tune tốt cho bộ dữ liệu đánh giá quán ăn
    
 
 
