@@ -11,15 +11,15 @@
 
    c. Tạo tokenizer và bộ vocab cho model
    
-      Đối với transfomer ta sẽ tự tạo tokenizer và vocab cho model
-   
-      Với model BERT ta sẽ sử dụng tokenizer có sẵn của BERT
+         Đối với transfomer ta sẽ tự tạo tokenizer và vocab cho model
+      
+         Với model BERT ta sẽ sử dụng tokenizer có sẵn của BERT
 
    d Tạo dataset và dataloader
    
-      Đối với transfomer: ta tự tạo dataset và dataloader dựa vào Pytorch
-   
-      Đối với BERT ta sẽ tạo tokenizer cho từng batch và data_collator cho quá trình traning
+         Đối với transfomer: ta tự tạo dataset và dataloader dựa vào Pytorch
+      
+         Đối với BERT ta sẽ tạo tokenizer cho từng batch và data_collator cho quá trình traning
 
 5. Khởi tạo model và training, testing
 
