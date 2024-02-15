@@ -10,6 +10,7 @@
    b. Tiền xử lí dữ liệu như: xóa thẻ HTML, URL ...
 
    c. Tạo tokenizer và bộ vocab cho model
+   
       Đối với transfomer ta sẽ tự tạo tokenizer và vocab cho model
    
       Với model BERT ta sẽ sử dụng tokenizer có sẵn của BERT
@@ -20,13 +21,13 @@
    
       Đối với BERT ta sẽ tạo tokenizer cho từng batch và data_collator cho quá trình traning
 
-4. Khởi tạo model và training, testing
+5. Khởi tạo model và training, testing
 
    Đối với transfomer ta sẽ code lại model từ đầu và traning
 
    Đối với BERT: ta cần khởi tạo thêm metrics cho qua trình traning sau đó load pretrained và training 
 
-5. Evaluate:
+6. Evaluate:
    
    a. Đối với model transfomer train từ đầu sau 100 epochs:
    
