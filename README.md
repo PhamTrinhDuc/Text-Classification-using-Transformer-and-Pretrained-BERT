@@ -31,7 +31,7 @@
    
    a. Đối với model transfomer train từ đầu sau 100 epochs:
    
-         ![1](https://github.com/PhamTrinhDuc/Text-Classification-using-Transformer-and-Pretrained-BERT/assets/127647215/6c442e11-d125-4548-be35-4cd8e98952dd)
+   ![1](https://github.com/PhamTrinhDuc/Text-Classification-using-Transformer-and-Pretrained-BERT/assets/127647215/6c442e11-d125-4548-be35-4cd8e98952dd)
 
    b. Đối với pretrained BERT sau 10 epochs:
 
