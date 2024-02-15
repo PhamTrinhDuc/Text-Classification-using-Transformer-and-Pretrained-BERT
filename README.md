@@ -17,13 +17,13 @@
    d. Tạo dataset và dataloader
    
       Đối với transfomer: ta tự tạo dataset và dataloader dựa vào Pytorch
-
+   
       Đối với BERT ta sẽ tạo tokenizer cho từng batch và data_collator cho quá trình traning
 
 4. Khởi tạo model và training, testing
 
    Đối với transfomer: ta sẽ code lại model từ đầu và traning
-
+   
    Đối với BERT: ta cần khởi tạo thêm metrics cho qua trình traning sau đó load pretrained và training 
 
 5. Evaluate:
@@ -46,25 +46,23 @@ Nhận thấy cả 2 model có kết quả tương đối nhau mặc dù BERT đ
 
 1. Kích thước bộ dữ liệu:
 
-   Bộ dữ liệu đánh giá quán ăn thường nhỏ hơn nhiều so với các bộ dữ liệu mà BERT được huấn luyện ban đầu (BooksCorpus và Wikipedia tiếng Anh).
+   Bộ dữ liệu đánh giá quán ăn thường nhỏ hơn nhiều so với các bộ dữ liệu mà BERT được huấn luyện ban đầu (BooksCorpus và Wikipedia tiếng Anh)
    
-   Việc huấn luyện BERT với một lượng dữ liệu nhỏ có thể không đủ để BERT học được các đặc điểm cụ thể của bộ dữ liệu đánh giá quán ăn.
+   Việc huấn luyện BERT với một lượng dữ liệu nhỏ có thể không đủ để BERT học được các đặc điểm cụ thể của bộ dữ liệu đánh giá quán ăn
 
 2. Chất lượng dữ liệu:
 
-   Chất lượng dữ liệu trong bộ dữ liệu đánh giá quán ăn có thể không cao như các bộ dữ liệu mà BERT được huấn luyện ban đầu.
+   Chất lượng dữ liệu trong bộ dữ liệu đánh giá quán ăn có thể không cao như các bộ dữ liệu mà BERT được huấn luyện ban đầu
    
-   Dữ liệu ồn ào hoặc không chính xác có thể ảnh hưởng đến hiệu quả của BERT.
+   Dữ liệu nhiễu hoặc không chính xác
 
 3. Thuật toán huấn luyện:
 
-   Thuật toán huấn luyện BERT có thể không được tối ưu hóa cho các bài toán về đánh giá quán ăn.
+   Thuật toán huấn luyện BERT có thể không được tối ưu hóa cho các bài toán về đánh giá quán ăn
    
-   Sử dụng một thuật toán huấn luyện khác có thể giúp cải thiện hiệu quả của BERT.
-
 4. Việc fine-tune:
 
-   BERT có thể không được fine-tune tốt cho bộ dữ liệu đánh giá quán ăn.
+   BERT có thể không được fine-tune tốt cho bộ dữ liệu đánh giá quán ăn
    
 
 
