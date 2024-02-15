@@ -21,13 +21,13 @@
       
          Đối với BERT ta sẽ tạo tokenizer cho từng batch và data_collator cho quá trình traning
 
-5. Khởi tạo model và training, testing
+4. Khởi tạo model và training, testing
 
-      Đối với transfomer ta sẽ code lại model từ đầu và traning
-   
-      Đối với BERT: ta cần khởi tạo thêm metrics cho qua trình traning sau đó load pretrained và training 
+         Đối với transfomer ta sẽ code lại model từ đầu và traning
+      
+         Đối với BERT: ta cần khởi tạo thêm metrics cho qua trình traning sau đó load pretrained và training 
 
-6. Evaluate:
+5. Evaluate:
    
    a. Đối với model transfomer train từ đầu sau 100 epochs:
    
@@ -43,7 +43,7 @@
           'epoch': 10.0}
 
 
-Nhận thấy cả 2 model có kết quả tương đối nhau mặc dù BERT đã được pretrained. Lí do có thể là: 
+6. Nhận thấy cả 2 model có kết quả tương đối nhau mặc dù BERT đã được pretrained. Lí do có thể là: 
 
       1. Kích thước bộ dữ liệu:
       
