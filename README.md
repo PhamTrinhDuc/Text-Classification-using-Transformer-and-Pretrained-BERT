@@ -9,15 +9,61 @@
 
    b. Tiền xử lí dữ liệu như: xóa thẻ HTML, URL ...
 
-   c. Tạo tokenizer và bộ vocab cho model. Đối với transfomer ta sẽ tự tạo tokenizer và vocab cho model, còn với pretrained model BERT ta sẽ sử dụng tokenizer có sẵn của BERT
+   c. Tạo tokenizer và bộ vocab cho model.
+      Đối với transfomer ta sẽ tự tạo tokenizer và vocab cho model
+   
+      Với model BERT ta sẽ sử dụng tokenizer có sẵn của BERT
 
    d. Tạo dataset và dataloader
+   
+      Đối với transfomer: ta tự tạo dataset và dataloader dựa vào Pytorch
 
-4. Khởi tạo model và training, testing.
+      Đối với BERT ta sẽ tạo tokenizer cho từng batch và data_collator cho quá trình traning
+
+4. Khởi tạo model và training, testing
+
+   Đối với transfomer: ta sẽ code lại model từ đầu và traning
+
+   Đối với BERT: ta cần khởi tạo thêm metrics cho qua trình traning sau đó load pretrained và training 
 
 5. Evaluate:
-   a. Đối với model transfomer train từ đầu:
+   a. Đối với model transfomer train từ đầu sau 100 epochs:
+   
    ![1](https://github.com/PhamTrinhDuc/Text-Classification-using-Transformer-and-Pretrained-BERT/assets/127647215/6c442e11-d125-4548-be35-4cd8e98952dd)
+
+   b. Đối với pretrained BERT sau 10 epochs:
+
+   {'eval_loss': 0.3751769959926605,
+    'eval_accuracy': 0.8438,
+    'eval_runtime': 55.469,
+    'eval_samples_per_second': 180.281,
+    'eval_steps_per_second': 1.424,
+    'epoch': 10.0}
+
+
+Nhận thấy cả 2 model có kết quả tương đối nhau mặc dù BERT đã được pretrained. Lí do có thể là: 
+1. Kích thước bộ dữ liệu:
+
+   Bộ dữ liệu đánh giá quán ăn thường nhỏ hơn nhiều so với các bộ dữ liệu mà BERT được huấn luyện ban đầu (BooksCorpus và Wikipedia tiếng Anh).
+   
+   Việc huấn luyện BERT với một lượng dữ liệu nhỏ có thể không đủ để BERT học được các đặc điểm cụ thể của bộ dữ liệu đánh giá quán ăn.
+
+2. Chất lượng dữ liệu:
+
+   Chất lượng dữ liệu trong bộ dữ liệu đánh giá quán ăn có thể không cao như các bộ dữ liệu mà BERT được huấn luyện ban đầu.
+   
+   Dữ liệu ồn ào hoặc không chính xác có thể ảnh hưởng đến hiệu quả của BERT.
+
+3. Thuật toán huấn luyện:
+
+   Thuật toán huấn luyện BERT có thể không được tối ưu hóa cho các bài toán về đánh giá quán ăn.
+   
+   Sử dụng một thuật toán huấn luyện khác có thể giúp cải thiện hiệu quả của BERT.
+
+4. Việc fine-tune:
+
+   BERT có thể không được fine-tune tốt cho bộ dữ liệu đánh giá quán ăn.
+   
 
 
 
